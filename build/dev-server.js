@@ -23,7 +23,7 @@ module.exports = app => {
         if (user.password !== password) {
           res.status(401).json({ message: 'ログインに失敗しました。' })
         } else {
-          res.json({ userId: users.userId, token: user.token })
+          res.json({ userId: user.userId, token: user.token })
         }
       } else {
         res.status(404).json({ message: 'ユーザが登録されていません。' })
